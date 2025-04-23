@@ -74,3 +74,65 @@
     <script src="script.js"></script>
 </body>
 </html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: url('background.jpg'); /* Замените 'background.jpg' на путь к вашему изображению */
+    background-size: cover; /* Чтобы изображение заполнило весь фон */
+    background-repeat: no-repeat; /* Чтобы изображение не повторялось */
+    background-position: center; /* Центрирование изображения */
+}
+
+header {
+    background-color: rgba(248, 200, 200, 0.8); /* Полупрозрачный фон для заголовка */
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.service {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для услуг */
+}
+
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-images img {
+    width: 30%;
+    margin: 5px;
+}
+
+.testimonial {
+    background-color: rgba(240, 240, 240, 0.9); /* Полупрозрачный фон для отзывов */
+    padding: 10px;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: rgba(255, 192, 203, 0.8); /* Полупрозрачный фон для футера */
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+Найти еще
