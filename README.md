@@ -59,7 +59,7 @@
         </section>
         <section id="contact">
             <h2>Контакты</h2>
-            <p>Телефон: <a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+            <p>Телефон: <a href="tel:+79000000000">+7 (900) 777-55-95</a></p>
             <p>Email: <a href="mailto:info@manicure-salon.ru">info@manicure-salon.ru</a></p>
             <p>Адрес: г. Москва, ул. Примерная, д. 1</p>
         </section>
