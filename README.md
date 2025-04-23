@@ -42,7 +42,7 @@
             <div class="gallery-images">
                 <img src="маникюр.jpg" alt="Маникюр">
                 <img src="nails2.jpg" alt="Педикюр">
-                <img src="nails3.jpg" alt="Дизайн ногтей">
+                <img src="Маникюр 2.jpg" alt="Дизайн ногтей">
                 <!-- Добавьте больше изображений здесь -->
             </div>
         </section>
