@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -75,20 +74,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
-header {
-    background-color: #f8c8c8;
-    color: #333;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 
