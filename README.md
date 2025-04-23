@@ -1,36 +1,9 @@
-clothing-store/
-├── index.html          # Главная страница
-├── catalog.html        # Страница каталога
-├── product.html        # Страница товара
-├── cart.html           # Страница корзины
-├── checkout.html       # Страница оформления заказа
-├── account.html          # Страница профиля пользователя
-├── styles/
-│   ├── main.scss       # Главный файл SCSS
-│   ├── components/     # Папка для компонентов CSS
-│   │   ├── _header.scss
-│   │   ├── _footer.scss
-│   │   ├── _product-card.scss
-│   │   └── ...
-│   └── utils/          # Папка для утилит CSS (миксины, переменные)
-│       ├── _variables.scss
-│       ├── _mixins.scss
-│       └── ...
-├── scripts/
-│   ├── app.js          # Главный файл JavaScript
-│   ├── modules/        # Папка для модулей JS
-│   │   ├── cart.js
-│   │   ├── product.js
-│   │   ├── api.js       # Для работы с API (например, для получения товаров)
-│   │   └── ...
-├── images/             # Изображения товаров, логотипы и т.д.
-└── fonts/              # Пользовательские шрифты (если используются)
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Магазин одежды</title>
+    <title>Салон Маникюра и Педикюра "Nail Art"</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
@@ -38,17 +11,15 @@ clothing-store/
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="">Контакты</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <a href="account.html" class="header-actions__item">
-                    <img src="" alt="Account">
-                </a>
-                <a href="cart.html" class="header-actions__item cart-link">
-                    <img src="" alt="Cart">
-                    <span class="cart-count">0</span>
-                </a>
+                <img src="" alt="Nail Art Logo">
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="services.html" class="nav__link">Услуги</a></li>
+                    <li class="nav__item"><a href="portfolio.html" class="nav__link">Портфоли>
+            <div class="header__cta">
+                <a href="booking.html" class="button button--primary">Записаться</a>
             </div>
         </div>
     </header>
@@ -56,23 +27,42 @@ clothing-store/
         <section class="hero">
             <div class="container">
                 <div class="hero__content">
-                    <h1 class="hero__title">Новая коллекция Осень/Зима 2024</h1>
-                    <p class="hero__description">Найдите свой идеальный образ в нашей новой коллекции.</p>
-                    <a href="catalog.html" class="button button--primary">Смотреть коллекцию</a>
+                    <h1 class="hero__title">Идеальный маникюр и педикюр для вас</h1>
+                    <p class="hero__description">Мы предлагаем широкий спектр услуг по уходу за руками и ногами. Доверьте свои руки профессионалам!</p>
+                    <a href="services.html" class="button button--primary">Наши услуги</a>
                 </div>
                 <div class="hero__image">
-                    <img src="" alt="Hero Image">
+                    <img src="" alt="Beautiful Nails">
                 </div>
             </div>
         </section>
-        <section class="featured-products">
+        <section class="services">
             <div class="container">
-                <h2 class="section-title">Популярные товары</h2>
-                <div class="product-grid">
-                    <!-- Product cards will be dynamically added here -->
+                <h2 class="section-title">Наши услуги</h2>
+                <div class="services-grid">
+                    <!-- Services cards will be dynamically added here -->
                 </div>
-                <div class="featured-products__cta">
-                    <a href="catalog.html" class="button">Все товары</a>
+                <div class="services__cta">
+                    <a href="services.html" class="button">Все услуги</a>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio">
+            <div class="container">
+                <h2 class="section-title">Наше портфолио</h2>
+                <div class="portfolio-gallery">
+                    <!-- Portfolio images will be dynamically added here -->
+                </div>
+                <div class="portfolio__cta">
+                    <a href="portfolio.html" class="button">Больше работ</a>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Отзывы клиентов</h2>
+                <div class="testimonials-slider">
+                    <!-- Testimonials will be dynamically added here (using a slider library) -->
                 </div>
             </div>
         </section>
@@ -80,32 +70,26 @@ clothing-store/
     <footer class="footer">
         <div class="container">
             <div class="footer__top">
-                <div class="footer__section">
-                    <h3 class="footer__title">Информация</h3>
-                    <ul class="footer__list">
-                        <li><a href="about.html" class="footer__link">О нас</a></li>
-                        <li><a href="delivery.html" class="footer__link">Доставка и оплата</a></li>
-                        <li><a href="return.html" class="footer__link">Возврат</a></li>
-                    </ul>
+                <div class="footer__info">
+                    <img src="" alt="Nail Art Logo" class="footer__logo">
+                    <p class="footer__description">Мы создаем красоту и заботимся о ваших руках и ногах с любовью и профессионализмом.</p>
                 </div>
-                <div class="footer__section">
-                    <h3 class="footer__title">Поддержка</h3>
-                    <ul class="footer__list">
-                        <li><a href="faq.html" class="footer__link">FAQ</a></li>
-                        <li><a href="contact.html" class="footer__link">Контакты</a></li>
-                    </ul>
+                <div class="footer__contact">
+                    <h3 class="footer__title">Контактная информация</h3>
+                    <p>Адрес: г. Москва, ул. Тверская, д. 10</p>
+                    <p>Телефон: +7 (495) 123-45-67</p>
+                    <p>Email: info@nailart.ru</p>
                 </div>
-                <div class="footer__section">
-                    <h3 class="footer__title">Подпишитесь на нас</h3>
-                    <ul class="footer__social">
+                <div class="footer__social">
+                    <h3 class="footer__title">Мы в социальных сетях</h3>
+                    <ul class="footer__social-list">
                         <li><a href="#" class="footer__social-link"><img src="" alt="Facebook"></a></li>
                         <li><a href="#" class="footer__social-link"><img src="" alt="Instagram"></a></li>
-                        <li><a href="#" class="footer__social-link"><img src="" alt="Twitter"></a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p class="footer__copyright">&copy; 2024 Магазин одежды. Все права защищены.</p>
+                <p class="footer__copyright">&copy; 2024 Салон маникюра и педикюра "Nail Art". Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -118,11 +102,12 @@ clothing-store/
 
 // 2. Base styles
 body {
-    font-family: 'Roboto', sans-serif; /* Подключите шрифт через @font-face */
+    font-family: 'Arial', sans-serif; /* Замените на ваш шрифт */
     margin: 0;
     padding: 0;
     background-color: $light-gray;
     color: $dark-text;
+    line-height: 1.6;
 }
 
 .container {
@@ -137,155 +122,108 @@ a {
     color: inherit;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 // 3. Import components
 @import "components/header";
 @import "components/footer";
 @import "components/buttons";
-@import "components/product-card";
+@import "components/service-card";
+@import "components/gallery";
 
 // 4. Global styles (e.g., section titles, utility classes)
 .section-title {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 2rem;
+    color: $primary-color;
 }
 
 /* =========================================================== */
 /*  Hero Section                                             */
 /* =========================================================== */
-
 .hero {
-    background-color: white;
-    padding: 4rem 0;
+    background-color: #f8f8f8;
+    padding: 5rem 0;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     &__content {
-      flex: 1;
-      padding-right: 2rem;
+        flex: 1;
+        padding-right: 2rem;
     }
     &__title {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: $primary-color;
     }
     &__description {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
     }
     &__image {
-      flex: 1;
-      text-align: center;
+        flex: 1;
+        text-align: center;
     }
-    &__image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    @media (min-width: 768px) {
-      display: flex;
-      align-items: center;
-    }
-  }
-  /* =========================================================== */
-  /*  Featured Product Section                                            */
-  /* =========================================================== */
-  .featured-products{
-    background-color:#f1f1f1;
-    padding:50px 0;
-    &__cta{
-       text-align:center;
-       padding:30px 0;
-    }
-  }
-.header {
-  background-color: $white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+}
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-  }
+/* =========================================================== */
+/*  Services Section                                          */
+/* =========================================================== */
 
-  .logo {
-    img {
-      max-height: 40px;
+.services {
+    padding: 4rem 0;
+    background-color: $white;
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Адаптивная сетка */
+        gap: 2rem;
+        margin-bottom: 2rem;
     }
-  }
-
-  .nav {
-    &__list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
+}
+/* =========================================================== */
+/*  Portfolio Section                                          */
+/* =========================================================== */
+.portfolio {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+    .portfolio-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная сетка */
+        gap: 1rem;
+        margin-bottom: 2rem;
     }
-
-    &__item {
-      margin-left: 1.5rem;
+    .portfolio-image {
+        overflow: hidden;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
     }
-
-    &__link {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: $dark-text;
-      transition: color 0.2s ease;
-
-      &:hover {
-        color: $primary-color;
-      }
-    }
-  }
-
-  .header-actions {
-    display: flex;
-    align-items: center;
-    &__item {
-      margin-left: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background-color: $light-gray;
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-      &:hover {
-        background-color: darken($light-gray, 10%);
-      }
-    }
-    .cart-link {
-      position: relative;
-      .cart-count {
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        background-color: $primary-color;
-        color: $white;
-        font-size: 0.8rem;
-        padding: 2px 5px;
-        border-radius: 50%;
-      }
-    }
-  }
 }
 // Colors
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-$success-color: #28a745;
-$danger-color: #dc3545;
+$primary-color: #e91e63;  // Яркий розовый цвет для акцентов
+$secondary-color: #9c27b0; // Фиолетовый цвет для дополнительных элементов
 
 $dark-text: #333;
 $light-text: #fff;
 
-$light-gray: #f8f9fa;
+$light-gray: #f9f9f9;
 $medium-gray: #ddd;
+
+$white: #fff;
 
 // Fonts
 $base-font-size: 16px;
@@ -296,153 +234,215 @@ $breakpoint-small: 576px;
 $breakpoint-medium: 768px;
 $breakpoint-large: 992px;
 $breakpoint-xlarge: 1200px;
-// Example mixin for responsive media queries
-@mixin media($breakpoint) {
-  @if $breakpoint == small {
-    @media (min-width: $breakpoint-small) { @content; }
-  }
-  @if $breakpoint == medium {
-    @media (min-width: $breakpoint-medium) { @content; }
-  }
-  @if $breakpoint == large {
-    @media (min-width: $breakpoint-large) { @content; }
-  }
-  @if $breakpoint == xlarge {
-    @media (min-width: $breakpoint-xlarge) { @content; }
-  }
-}
-import { getFeaturedProducts } from './modules/api.js'; // Example of an API module
-import { updateCartCount } from './modules/cart.js'; // Example of a Cart module
+import { loadServices } from './modules/services.js';
+import { loadPortfolio } from './modules/portfolio.js';
+import { initBooking } from './modules/booking.js';  // Предполагается, что здесь будет код для инициализации формы бронирования
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadFeaturedProducts();
-    updateCartCount(); // Initialize cart count on page load
+    loadServices();
+    loadPortfolio();
+    initBooking(); // Инициализация модуля для бронирования
 });
 
-async function loadFeaturedProducts() {
-    const productGrid = document.querySelector('.product-grid');
-    if (!productGrid) return; // If the element doesn't exist, exit function
-
+// Функция для динамической загрузки карточек услуг
+async function loadServices() {
+    const servicesGrid = document.querySelector('.services-grid');
+    if (!servicesGrid) return;  // Если элемента не существует, выходим
     try {
-        const products = await getFeaturedProducts();
-        products.forEach(product => {
-            const card = createProductCard(product);
-            productGrid.appendChild(card);
+        const services = await getServicesData();  // Получаем данные об услугах (замените на реальный API-запрос)
+        services.forEach(service => {
+            const serviceCard = createServiceCard(service);
+            servicesGrid.appendChild(serviceCard);
         });
     } catch (error) {
-        console.error('Error loading featured products:', error);
-        productGrid.innerHTML = '<p class="error-message">Не удалось загрузить товары.</p>';
+        console.error("Ошибка при загрузке списка услуг:", error);
+        servicesGrid.innerHTML = "<p>Не удалось загрузить услуги.</p>"; // Обработка ошибки
     }
 }
 
-function createProductCard(product) {
-    // Create a product card element dynamically
+// Функция для динамической загрузки изображений портфолио
+async function loadPortfolio() {
+    const portfolioGallery = document.querySelector('.portfolio-gallery');
+    if (!portfolioGallery) return;  // Если элемента не существует, выходим
+    try {
+        const portfolioItems = await getPortfolioData();  // Получаем данные о портфолио (замените на реальный API-запрос)
+        portfolioItems.forEach(item => {
+            const portfolioImage = createPortfolioImage(item);
+            portfolioGallery.appendChild(portfolioImage);
+        });
+    } catch (error) {
+        console.error("Ошибка при загрузке портфолио:", error);
+        portfolioGallery.innerHTML = "<p>Не удалось загрузить портфолио.</p>"; // Обработка ошибки
+    }
+}
+
+// Функция для создания карточки услуги
+function createServiceCard(service) {
     const card = document.createElement('div');
-    card.className = 'product-card'; // Add the class name here
-    card.innerHTML =  <a href="product.html?id=${product.id}" class="product-card__link">
-          <img src="" alt="${product.name}" class="product-card__image">
-              <h3 class="product-card__title">${product.name}</h3>
-          <p class="product-card__price">Цена: ${product.price} ₽</p>
-          </a>
-          <button class="button button--secondary add-to-cart" data-product-id="${product.id}">В корзину</button>  return card;
-  }
-// Add event listeners to the add to cart buttons
-document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('add-to-cart')) {
-        const productId = event.target.dataset.productId;
-        // Here, call your `addToCart` function from the `cart.js` module
-        // and pass the `productId`.
-        // The `addToCart` function will handle updating the cart
-        // and saving the information (in `localStorage` or elsewhere).
-        addToCart(productId); // Call your `addToCart` function
-        updateCartCount();    // Update the cart count after adding an item
-        console.log(`Товар с ID ${productId} добавлен в корзину.`);
-        // Provide feedback to the user
-        //alert(`Товар с ID ${productId} добавлен в корзину!`);
-      }
-  });
-  // scripts/modules/cart.js
-
-const CART_KEY = 'shoppingCart';
-
-// Функция для получения содержимого корзины из localStorage
-export function getCart() {
-    const cartData = localStorage.getItem(CART_KEY);
-    return cartData ? JSON.parse(cartData) : [];
+    card.className = 'service-card';  // Задаем класс элемента
+    card.innerHTML = `
+        <img src="" alt="${service.name}" class="service-card__image">
+        <h3 class="service-card__title">${service.name}</h3>
+        <p class="service-card__description">${service.description}</p>
+        <p class="service-card__price">Цена: ${service.price} ₽</p> 
+    return card;
 }
 
-// Функция для сохранения корзины в localStorage
-export function saveCart(cart) {
-    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+// Функция для создания элемента изображения в портфолио
+function createPortfolioImage(item) {
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'portfolio-image';  // Задаем класс элемента
+    imageContainer.innerHTML = `
+        <img src="" alt="${item.description}">
+    return imageContainer;
 }
 
-// Функция для добавления товара в корзину
-export function addToCart(productId) {
-    let cart = getCart();
-    cart.push(productId);
-    saveCart(cart);
-}
+// ======================================================================
+// MOCK DATA (ЗАМЕНИТЕ НА РЕАЛЬНЫЕ ЗАПРОСЫ К API)
+// ======================================================================
 
-// Функция для удаления товара из корзины (по индексу)
-export function removeFromCart(index) {
-    let cart = getCart();
-    if (index >= 0 && index < cart.length) {
-        cart.splice(index, 1); // Удаляем элемент по индексу
-        saveCart(cart);          // Сохраняем обновлённую корзину
-    }
-}
-
-// Function to calculate the total number of items in the cart
-export function getCartItemCount() {
-    const cart = getCart();
-    return cart.length;
-}
-
-// Update the cart count in the header
-export function updateCartCount() {
-  const cartCountElement = document.querySelector('.cart-count');
-  if (cartCountElement) {
-      const itemCount = getCartItemCount();
-      cartCountElement.textContent = itemCount.toString();
-  }
-}
-// api.js
-// This is a mock implementation.  In a real application, you would fetch data from a server.
-
-const MOCK_PRODUCTS = [
-    {
-        id: 1,
-        name: "Stylish T-Shirt",
-        image: "images/product1.jpg",  // Replace with real image URL
-        price: 2500,
-        description: "A comfortable and stylish t-shirt for everyday wear."
-    },
-    {
-        id: 2,
-        name: "Classic Jeans",
-        image: "images/product2.jpg",  // Replace with real image URL
-        price: 5000,
-        description: "Timeless denim jeans that never go out of style."
-    },
-    {
-        id: 3,
-        name: "Leather Jacket",
-        image: "images/product3.jpg",  // Replace with real image URL
-        price: 12000,
-        description: "A premium leather jacket to elevate your look."
-    },
-];
-
-export async function getFeaturedProducts() {
-    // In a real app, you'd fetch this data from an API endpoint
-    // For example:
-    // const response = await fetch('/api/featured-products');
-    // const data = await response.json();
-    // return data;
-    // Simulating a delay to mimic a real API call
+// Пример данных об услугах (ЗАМЕНИТЕ НА РЕАЛЬНЫЙ API-ЗАПРОС)
+async function getServicesData() {
     return new Promise(resolve => {
         setTimeout(() => {
-            resolve(MOCK_PRODUCTS);
-        }, 500);
+            resolve([
+                {
+                    id: 1,
+                    name: "Классический маникюр",
+                    image: "images/service1.jpg",
+                    description: "Уход за ногтями и придание им формы.",
+                    price: 800
+                },
+                {
+                    id: 2,
+                    name: "Педикюр",
+                    image: "images/service2.jpg",
+                    description: "Комплексный уход за кожей стоп и ногтями.",
+                    price: 1200
+                },
+                {
+                    id: 3,
+                    name: "Гель-лак",
+                    image: "images/service3.jpg",
+                    description: "Покрытие ногтей гель-лаком на длительный срок.",
+                    price: 1500
+                }
+            ]);
+        }, 500); // Имитация задержки при запросе к API
     });
 }
+
+// Пример данных для портфолио (ЗАМЕНИТЕ НА РЕАЛЬНЫЙ API-ЗАПРОС)
+async function getPortfolioData() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve([
+                {
+                    id: 1,
+                    image: "images/portfolio1.jpg",
+                    description: "Маникюр в стиле минимализм"
+                },
+                {
+                    id: 2,
+                    image: "images/portfolio2.jpg",
+                    description: "Яркий летний педикюр"
+                },
+                {
+                    id: 3,
+                    image: "images/portfolio3.jpg",
+                    description: "Элегантный дизайн ногтей"
+                }
+            ]);
+        }, 500); // Имитация задержки при запросе к API
+    });
+}
+// modules/booking.js
+
+export function initBooking() {
+    const bookingForm = document.getElementById('booking-form');
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', handleBookingSubmit);
+    }
+}
+
+async function handleBookingSubmit(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const service = document.getElementById('service').value;
+    const date = document.getElementById('date').value;
+    // Здесь можно добавить валидацию данных
+    const bookingData = {
+        name,
+        phone,
+        email,
+        service,
+        date
+    };
+    try {
+        const response = await sendBookingRequest(bookingData); // Отправляем запрос на сервер (имитация)
+        if (response.success) {
+            alert('Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.');
+            bookingForm.reset();  // Очищаем форму
+        } else {
+            alert('Ошибка при отправке заявки. Пожалуйста, попробуйте позже.');
+        }
+    } catch (error) {
+        console.error('Ошибка при отправке запроса:', error);
+        alert('Произошла ошибка. Пожалуйста, попробуйте снова.');
+    }
+}
+
+// Функция имитации отправки запроса (замените на реальный API-запрос)
+async function sendBookingRequest(data) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            // Имитация успешной отправки (можно добавить логику для имитации ошибки)
+            const success = Math.random() > 0.2;  // 80% вероятность успеха
+            resolve({ success: success });
+        }, 1000);
+    });
+}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Записаться на прием - Салон маникюра</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header class="header">
+        <!--  Header  -->
+    </header>
+    <main class="main">
+        <section class="booking">
+            <div class="container">
+                <h2 class="section-title">Записаться на прием</h2>
+                <form id="booking-form" class="booking-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text="service" required>
+                            <option value="">--Выберите услугу--</option>
+                            <option value="manicure">Маникюр</option>
+                            <option value="pedicure">Педикюр</option>
+                            <option value="gel-polish">Гель-лак</option>
+                            <!-- Добавьте другие услуги -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Выберите дату и время:</label>
+                        <input type="datetime-local" id="date" name="date" required>
+                    </div>
+                    <button type="submit" class="button button--primary">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <!-- Footer -->
+    </footer>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
