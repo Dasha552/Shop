@@ -40,7 +40,7 @@
         <section id="gallery">
             <h2>Галерея</h2>
             <div class="gallery-images">
-                <img src="nails1.jpg" alt="Маникюр">
+                <img src="маникюр.jpg" alt="Маникюр">
                 <img src="nails2.jpg" alt="Педикюр">
                 <img src="nails3.jpg" alt="Дизайн ногтей">
                 <!-- Добавьте больше изображений здесь -->
