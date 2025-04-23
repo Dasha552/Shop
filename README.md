@@ -79,7 +79,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-image: url('background.jpg'); /* Замените 'background.jpg' на путь к вашему изображению */
+    background-image: url('фон.jpg'); /* Замените 'background.jpg' на путь к вашему изображению */
     background-size: cover; /* Чтобы изображение заполнило весь фон */
     background-repeat: no-repeat; /* Чтобы изображение не повторялось */
     background-position: center; /* Центрирование изображения */
